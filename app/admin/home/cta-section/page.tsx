@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Edit, Trash2, Plus } from "lucide-react";
-import { ContactCTASection, deleteContactCTA, listContactCTAApi } from "@/app/api/home/cta";
+import { ContactCTASection, deleteContactCTA, listContactCTAApi } from "@/app/api/admin/home/cta";
 
 
 

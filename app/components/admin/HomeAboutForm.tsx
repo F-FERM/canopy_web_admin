@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
 import ImageUpload from "./ImageUpload";
-import { Stat } from "../Interfaces/HomeAboutStat";
-import { AboutSection } from "../api/home/homeaboutstat";
+import { AboutSection } from "@/app/api/admin/home/homeaboutstat";
+import { Stat } from "@/Interfaces/HomeAboutStat";
+
 
 
 // ─────────────────────────────

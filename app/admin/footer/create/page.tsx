@@ -1,8 +1,9 @@
 "use client";
 
+import { createFooterApi } from "@/app/api/admin/footer/footer";
+import FooterForm from "@/app/components/admin/FooterForm";
 import { useRouter } from "next/navigation";
-import { createFooterApi } from "@/app/api/footer/footer";
-import FooterForm from "@/app/Components/FooterForm";
+
 
 export default function CreateFooterPage() {
     const router = useRouter();

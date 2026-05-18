@@ -10,8 +10,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { AboutCardsSection, listAboutCardsApi, updateAboutCards } from "@/app/api/about/aboutValues";
-import AboutCardsForm from "@/app/Components/AboutValuesForm";
+import { AboutCardsSection, listAboutCardsApi, updateAboutCards } from "@/app/api/admin/about/aboutValues";
+import AboutCardsForm from "@/app/components/admin/AboutValuesForm";
+
 
 
 

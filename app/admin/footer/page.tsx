@@ -3,11 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Edit, Trash2, Plus } from "lucide-react";
-import {
-    deleteFooterApi,
-    Footer,
-    listFooterApi,
-} from "@/app/api/footer/footer";
+import { deleteFooterApi, Footer, listFooterApi } from "@/app/api/admin/footer/footer";
+
 
 export default function FooterListPage() {
     const [data, setData] = useState<Footer[]>([]);

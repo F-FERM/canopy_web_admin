@@ -10,9 +10,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
+import { ContactLandingSection, listContactLandingApi, updateContactLanding } from "@/app/api/admin/contact/ContactLanding";
+import ContactLandingForm from "@/app/components/admin/ContactLandingForm";
 
-import ContactLandingForm from "@/app/Components/ContactLandingForm";
-import { ContactLandingSection, listContactLandingApi, updateContactLanding } from "@/app/api/contact/ContactLanding";
 
 
 

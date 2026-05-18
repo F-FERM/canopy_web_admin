@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createAboutCards } from "@/app/api/about/aboutValues";
-import AboutCardsForm from "@/app/Components/AboutValuesForm";
+import { createAboutCards } from "@/app/api/admin/about/aboutValues";
+import AboutCardsForm from "@/app/components/admin/AboutValuesForm";
+
 
 
 

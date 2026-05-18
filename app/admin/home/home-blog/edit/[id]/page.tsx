@@ -10,8 +10,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { BlogSection, listBlogSectionApi, updateBlogSection } from "@/app/api/home/HomeBlog";
-import BlogSectionForm from "@/app/Components/HomeBlogForm";
+import { BlogSection, listBlogSectionApi, updateBlogSection } from "@/app/api/admin/home/HomeBlog";
+import BlogSectionForm from "@/app/components/admin/HomeBlogForm";
+
 
 
 

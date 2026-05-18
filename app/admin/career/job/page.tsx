@@ -13,7 +13,7 @@ import {
     Trash2,
     Briefcase,
 } from "lucide-react";
-import { CareerOpeningsSection, deleteCareerOpenings, listCareerOpeningsApi } from "@/app/api/career/job";
+import { CareerOpeningsSection, deleteCareerOpenings, listCareerOpeningsApi } from "@/app/api/admin/career/job";
 
 
 

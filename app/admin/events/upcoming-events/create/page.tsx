@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createUpcomingEvents } from "@/app/api/events/upcoming";
-import UpcomingEventsForm from "@/app/Components/UpcomingEventsForm";
+import { createUpcomingEvents } from "@/app/api/admin/events/upcoming";
+import UpcomingEventsForm from "@/app/components/admin/UpcomingEventsForm";
+
 
 
 

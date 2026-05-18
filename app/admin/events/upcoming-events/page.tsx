@@ -14,7 +14,7 @@ import {
     Calendar,
     Layers,
 } from "lucide-react";
-import { deleteUpcomingEvents, listUpcomingEventsApi, UpcomingEventsSection } from "@/app/api/events/upcoming";
+import { deleteUpcomingEvents, listUpcomingEventsApi, UpcomingEventsSection } from "@/app/api/admin/events/upcoming";
 
 
 export default function UpcomingEventsPage() {

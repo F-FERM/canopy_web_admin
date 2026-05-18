@@ -1,8 +1,9 @@
 "use client";
 
+import { createBlogLanding } from "@/app/api/admin/blog/landing";
+import BlogLandingForm from "@/app/components/admin/BlogLandingForm";
 import { useRouter } from "next/navigation";
-import BlogLandingForm from "@/app/Components/BlogLandingForm";
-import { createBlogLanding } from "@/app/api/blog/landing";
+
 
 export default function CreateBlogLandingPage() {
     const router = useRouter();

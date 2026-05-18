@@ -107,6 +107,11 @@ const sidebarItems = [
       { label: "Manage", href: "/admin/home/cta-section", icon: Image },
     ],
   },
+   {
+    label: "Contact Details",
+    icon: Briefcase,
+    children: [{ label: "Manage", href: "/admin/contact-details", icon: Image }],
+  },
   {
     label: "Footer",
     icon: Briefcase,

@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createCareerLanding } from "@/app/api/career/landing";
-import CareerLandingForm from "@/app/Components/CareerForm";
+import { createCareerLanding } from "@/app/api/admin/career/landing";
+import CareerLandingForm from "@/app/components/admin/CareerForm";
+
 
 
 

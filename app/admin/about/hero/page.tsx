@@ -10,7 +10,7 @@ import {
   Trash2,
   Image as ImageIcon,
 } from "lucide-react";
-import { AboutSection, deleteAboutSection, listAboutSectionApi } from "@/app/api/about/abouthero";
+import { AboutSection, deleteAboutSection, listAboutSectionApi } from "@/app/api/admin/about/abouthero";
 
 
 

@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createIndustries } from "@/app/api/home/homeIndustries";
-import IndustriesWeServeForm from "@/app/Components/HomeIndustriesForm";
+import { createIndustries } from "@/app/api/admin/home/homeIndustries";
+import IndustriesWeServeForm from "@/app/components/admin/HomeIndustriesForm";
+
 
 
 

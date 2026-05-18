@@ -9,7 +9,7 @@ export interface JobApplicationData {
 
 export const SubmitJobApplicationApi = async (data: JobApplicationData) => {
   try {
-    const response = await axiosInstance.post("/job-applications", data);
+    const response = await axiosInstance.post("/careers/job-applications", data);
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) {

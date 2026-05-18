@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { createCareerOpenings } from "@/app/api/career/job";
-import CareerOpeningsForm from "@/app/Components/CareerJobForm";
+import { createCareerOpenings } from "@/app/api/admin/career/job";
+import CareerOpeningsForm from "@/app/components/admin/CareerJobForm";
 
 
 

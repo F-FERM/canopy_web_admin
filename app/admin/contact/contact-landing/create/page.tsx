@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createContactLanding } from "@/app/api/contact/ContactLanding";
-import ContactLandingForm from "@/app/Components/ContactLandingForm";
+import { createContactLanding } from "@/app/api/admin/contact/ContactLanding";
+import ContactLandingForm from "@/app/components/admin/ContactLandingForm";
+
 
 
 

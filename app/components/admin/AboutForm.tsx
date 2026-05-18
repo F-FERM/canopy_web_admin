@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Plus, Trash2, GripVertical, ChevronDown, ChevronUp } from "lucide-react";
 import ImageUpload from "./ImageUpload";
-import { AboutSection, AboutStat } from "../api/home/homeaboutstat";
+import { AboutSection, AboutStat } from "@/app/api/admin/home/homeaboutstat";
 
 
 // ─── Types ─────────────────────────────────────────────────────────────────────

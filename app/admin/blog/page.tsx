@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteBlogLanding, listBlogLandingApi } from "@/app/api/blog/landing";
+import { deleteBlogLanding, listBlogLandingApi } from "@/app/api/admin/blog/landing";
 import { Plus, Edit, Trash2, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";

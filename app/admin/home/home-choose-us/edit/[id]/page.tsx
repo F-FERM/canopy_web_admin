@@ -10,8 +10,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { listWhyChooseUsApi, updateWhyChooseUs, WhyChooseUsSection } from "@/app/api/home/homeChooseus";
-import WhyChooseUsForm from "@/app/Components/HomeChooseForm";
+import { listWhyChooseUsApi, updateWhyChooseUs, WhyChooseUsSection } from "@/app/api/admin/home/homeChooseus";
+import WhyChooseUsForm from "@/app/components/admin/HomeChooseForm";
+
 
 
 

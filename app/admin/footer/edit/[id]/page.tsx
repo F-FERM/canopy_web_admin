@@ -2,13 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { Footer, listFooterApi, updateFooterApi } from "@/app/api/admin/footer/footer";
+import FooterForm from "@/app/components/admin/FooterForm";
 
-import {
-    listFooterApi,
-    updateFooterApi,
-    Footer,
-} from "@/app/api/footer/footer";
-import FooterForm from "@/app/Components/FooterForm";
+
 
 export default function EditFooterPage() {
     const { id } = useParams();

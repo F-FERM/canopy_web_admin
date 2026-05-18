@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { createAboutSection } from "@/app/api/about/abouthero";
-import AboutSectionForm from "@/app/Components/AboutHero";
+import AboutSectionForm from "@/app/components/admin/AboutHero";
+import { createAboutSection } from "@/app/api/admin/about/abouthero";
 
 
 export default function CreateAboutSectionPage() {

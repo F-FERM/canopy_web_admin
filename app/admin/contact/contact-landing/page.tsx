@@ -14,7 +14,7 @@ import {
     Phone,
     LayoutGrid,
 } from "lucide-react";
-import { ContactLandingSection, deleteContactLanding, listContactLandingApi } from "@/app/api/contact/ContactLanding";
+import { ContactLandingSection, deleteContactLanding, listContactLandingApi } from "@/app/api/admin/contact/ContactLanding";
 
 
 

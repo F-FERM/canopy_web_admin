@@ -10,7 +10,7 @@ import {
   Trash2,
   Layers,
 } from "lucide-react";
-import { AboutCardsSection, deleteAboutCards, listAboutCardsApi } from "@/app/api/about/aboutValues";
+import { AboutCardsSection, deleteAboutCards, listAboutCardsApi } from "@/app/api/admin/about/aboutValues";
 
 
 export default function AboutCardsPage() {

@@ -13,8 +13,8 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import EventsLandingForm from "@/app/Components/EventLandingForm";
-import { EventsLandingSection, listEventsLandingApi, updateEventsLanding } from "@/app/api/events/landing";
+import { EventsLandingSection, listEventsLandingApi, updateEventsLanding } from "@/app/api/admin/events/landing";
+import EventsLandingForm from "@/app/components/admin/EventLandingForm";
 
 
 

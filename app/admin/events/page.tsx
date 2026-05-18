@@ -13,7 +13,7 @@ import {
     Trash2,
     ImageIcon,
 } from "lucide-react";
-import { deleteEventsLanding, EventsLandingSection, listEventsLandingApi } from "@/app/api/events/landing";
+import { deleteEventsLanding, EventsLandingSection, listEventsLandingApi } from "@/app/api/admin/events/landing";
 
 
 

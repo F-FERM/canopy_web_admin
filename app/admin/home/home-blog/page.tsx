@@ -10,7 +10,7 @@ import {
   Trash2,
   Layers,
 } from "lucide-react";
-import { BlogSection, deleteBlogSection, listBlogSectionApi } from "@/app/api/home/HomeBlog";
+import { BlogSection, deleteBlogSection, listBlogSectionApi } from "@/app/api/admin/home/HomeBlog";
 
 
 

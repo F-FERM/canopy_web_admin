@@ -13,9 +13,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
+import { listUpcomingEventsApi, UpcomingEventsSection, updateUpcomingEvents } from "@/app/api/admin/events/upcoming";
+import UpcomingEventsForm from "@/app/components/admin/UpcomingEventsForm";
 
-import UpcomingEventsForm from "@/app/Components/UpcomingEventsForm";
-import { listUpcomingEventsApi, UpcomingEventsSection, updateUpcomingEvents } from "@/app/api/events/upcoming";
 
 
 

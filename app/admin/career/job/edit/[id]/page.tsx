@@ -13,8 +13,9 @@ import {
 import Link from "next/link";
 
 import { ArrowLeft } from "lucide-react";
-import { CareerOpeningsSection, listCareerOpeningsApi, updateCareerOpenings } from "@/app/api/career/job";
-import CareerOpeningsForm from "@/app/Components/CareerJobForm";
+import { CareerOpeningsSection, listCareerOpeningsApi, updateCareerOpenings } from "@/app/api/admin/career/job";
+import CareerOpeningsForm from "@/app/components/admin/CareerJobForm";
+
 
 
 

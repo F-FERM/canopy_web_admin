@@ -10,7 +10,8 @@ import {
   Trash2,
   Users,
 } from "lucide-react";
-import { deleteEmployeeService, EmployeeServiceSection, listEmployeeServiceApi } from "@/app/api/about/aboutEmployee";
+import { deleteEmployeeService, EmployeeServiceSection } from "@/app/api/admin/about/aboutEmployee";
+import { listEmployeeServiceApi } from "@/app/api/web/AboutEmployee";
 
 
 

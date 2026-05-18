@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import BlogLandingForm from "@/app/Components/BlogLandingForm";
-import { listBlogLandingApi, updateBlogLanding } from "@/app/api/blog/landing";
+import { listBlogLandingApi, updateBlogLanding } from "@/app/api/admin/blog/landing";
+import BlogLandingForm from "@/app/components/admin/BlogLandingForm";
+
 
 export default function EditBlogLandingPage() {
     const { id } = useParams();

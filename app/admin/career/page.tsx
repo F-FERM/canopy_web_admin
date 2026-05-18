@@ -9,7 +9,7 @@ import {
     Edit,
     Trash2,
 } from "lucide-react";
-import { CareerLandingSection, deleteCareerLanding, listCareerLandingApi } from "@/app/api/career/landing";
+import { CareerLandingSection, deleteCareerLanding, listCareerLandingApi } from "@/app/api/admin/career/landing";
 
 
 
