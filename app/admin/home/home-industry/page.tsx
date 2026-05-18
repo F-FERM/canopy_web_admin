@@ -4,43 +4,27 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
+import { Plus, Edit, Trash2, Layers } from "lucide-react";
 import {
-  Plus,
-  Edit,
-  Trash2,
-  Layers,
-} from "lucide-react";
-import { deleteIndustries, IndustriesWeServeSection, listIndustriesApi } from "@/app/api/home/homeIndustries";
-
-
+  deleteIndustries,
+  IndustriesWeServeSection,
+  listIndustriesApi,
+} from "@/app/api/admin/home/homeIndustries";
 
 export default function IndustriesPage() {
-  const [data, setData] = useState<
-    IndustriesWeServeSection[]
-  >([]);
+  const [data, setData] = useState<IndustriesWeServeSection[]>([]);
 
-  const [loading, setLoading] =
-    useState(true);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     try {
-      const res =
-        await listIndustriesApi({});
+      const res = await listIndustriesApi({});
 
-      const arrayData = Array.isArray(res)
-        ? res
-        : (res as any)?.data || [res];
+      const arrayData = Array.isArray(res) ? res : (res as any)?.data || [res];
 
-      setData(
-        Array.isArray(arrayData)
-          ? arrayData
-          : []
-      );
+      setData(Array.isArray(arrayData) ? arrayData : []);
     } catch (err) {
-      console.error(
-        "Fetch error:",
-        err
-      );
+      console.error("Fetch error:", err);
 
       setData([]);
     } finally {
@@ -52,25 +36,15 @@ export default function IndustriesPage() {
     fetchData();
   }, []);
 
-  const handleDelete = async (
-    id: string
-  ) => {
-    if (
-      !confirm(
-        "Are you sure you want to delete this section?"
-      )
-    )
-      return;
+  const handleDelete = async (id: string) => {
+    if (!confirm("Are you sure you want to delete this section?")) return;
 
     try {
       await deleteIndustries(id);
 
       fetchData();
     } catch (err) {
-      console.error(
-        "Delete error:",
-        err
-      );
+      console.error("Delete error:", err);
 
       alert("Failed to delete item");
     }
@@ -91,9 +65,7 @@ export default function IndustriesPage() {
             Industries We Serve
           </h1>
 
-          <p className="text-gray-500">
-            Manage Industries section.
-          </p>
+          <p className="text-gray-500">Manage Industries section.</p>
         </div>
 
         <Link
@@ -109,21 +81,13 @@ export default function IndustriesPage() {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-gray-50 border-b">
-              <th className="p-4 font-semibold text-gray-700">
-                Heading
-              </th>
+              <th className="p-4 font-semibold text-gray-700">Heading</th>
 
-              <th className="p-4 font-semibold text-gray-700">
-                Description
-              </th>
+              <th className="p-4 font-semibold text-gray-700">Description</th>
 
-              <th className="p-4 font-semibold text-gray-700">
-                Industries
-              </th>
+              <th className="p-4 font-semibold text-gray-700">Industries</th>
 
-              <th className="p-4 font-semibold text-gray-700">
-                Actions
-              </th>
+              <th className="p-4 font-semibold text-gray-700">Actions</th>
             </tr>
           </thead>
 
@@ -135,14 +99,10 @@ export default function IndustriesPage() {
                   className="border-b hover:bg-gray-50 transition-colors"
                 >
                   <td className="p-4">
-                    <p className="font-medium text-gray-800">
-                      {item.heading}
-                    </p>
+                    <p className="font-medium text-gray-800">{item.heading}</p>
 
                     <p className="text-sm text-blue-600">
-                      {
-                        item.headingHighlight
-                      }
+                      {item.headingHighlight}
                     </p>
                   </td>
 
@@ -153,14 +113,8 @@ export default function IndustriesPage() {
                   <td className="p-4">
                     <span className="inline-flex items-center gap-1 text-sm text-gray-600">
                       <Layers size={14} />
-
-                      {item.industries
-                        ?.length ?? 0}{" "}
-                      industry
-                      {item.industries
-                        ?.length !== 1
-                        ? "ies"
-                        : "y"}
+                      {item.industries?.length ?? 0} industry
+                      {item.industries?.length !== 1 ? "ies" : "y"}
                     </span>
                   </td>
 
@@ -174,11 +128,7 @@ export default function IndustriesPage() {
                       </Link>
 
                       <button
-                        onClick={() =>
-                          handleDelete(
-                            item._id
-                          )
-                        }
+                        onClick={() => handleDelete(item._id)}
                         className="p-2 text-red-600 hover:bg-red-50 rounded-md transition-colors"
                       >
                         <Trash2 size={18} />
@@ -193,8 +143,7 @@ export default function IndustriesPage() {
                   colSpan={4}
                   className="p-8 text-center text-gray-500 italic"
                 >
-                  No Industries sections
-                  found.
+                  No Industries sections found.
                 </td>
               </tr>
             )}

@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
-import AboutSectionForm from "@/app/Components/HomeAboutForm";
-import { AboutSection, getAboutApi, updateAboutApi } from "@/app/api/home/homeaboutstat";
-
+import {
+  AboutSection,
+  getAboutApi,
+  updateAboutApi,
+} from "@/app/api/admin/home/homeaboutstat";
+import AboutSectionForm from "@/app/components/admin/HomeAboutForm";
 
 export default function EditAboutPage() {
   const router = useRouter();
@@ -30,19 +33,13 @@ export default function EditAboutPage() {
 
   if (loading) return <div className="p-10">Loading...</div>;
 
-  if (!data)
-    return <div className="p-10">Not found</div>;
+  if (!data) return <div className="p-10">Not found</div>;
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold mb-4">
-        Edit About Section
-      </h1>
+      <h1 className="text-xl font-bold mb-4">Edit About Section</h1>
 
-      <AboutSectionForm
-        initialData={data}
-        onSubmit={handleSubmit}
-      />
+      <AboutSectionForm initialData={data} onSubmit={handleSubmit} />
     </div>
   );
 }

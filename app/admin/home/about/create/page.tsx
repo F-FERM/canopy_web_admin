@@ -1,9 +1,8 @@
 "use client";
 
-import { createAboutApi } from "@/app/api/home/homeaboutstat";
-import AboutSectionForm from "@/app/Components/HomeAboutForm";
+import { createAboutApi } from "@/app/api/admin/home/homeaboutstat";
+import AboutSectionForm from "@/app/components/admin/HomeAboutForm";
 import { useRouter } from "next/navigation";
-
 
 export default function CreateAboutPage() {
   const router = useRouter();
@@ -15,9 +14,7 @@ export default function CreateAboutPage() {
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold mb-4">
-        Create About Section
-      </h1>
+      <h1 className="text-xl font-bold mb-4">Create About Section</h1>
 
       <AboutSectionForm onSubmit={handleSubmit} />
     </div>
