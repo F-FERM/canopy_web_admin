@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { listBlogSectionApi } from "@/app/api/HomeBlog";
-import BadgeIcon from "../../../public/images/home/Vector (1).png"
+import BadgeIcon from "../../../public/images/home/Vector (1).png";
 // ── API types ──────────────────────────────────────────────────────────────
 interface BlogDetailPage {
   heroSection: {
@@ -90,26 +90,27 @@ export default function BlogSection() {
   const blogs = data?.blogs.filter((blog) => blog.isActive) ?? [];
 
   return (
-    <section id="blog-posts" className="relative overflow-hidden pt-10 sm:pt-14 md:pt-16 lg:pt-20 xl:pt-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-40 pb-10 sm:pb-14 md:pb-16 lg:pb-20 xl:pb-20">
+    <section
+      id="blog-posts"
+      className="relative overflow-hidden pt-10 sm:pt-14 md:pt-16 lg:pt-20 xl:pt-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-40 pb-10 sm:pb-14 md:pb-16 lg:pb-20 xl:pb-20"
+    >
       <div className="relative z-10 max-w-[1920px] mx-auto">
-
         {/* ── SECTION HEADER ────────────────────────────────────────────── */}
         <div className="text-center mb-8 sm:mb-12 md:mb-14 lg:mb-18 xl:mb-20 px-0 sm:px-2 md:px-6 lg:px-16 xl:px-[120px]">
-
           {/* Badge */}
           <div className="flex items-center justify-center gap-2 mb-3 sm:mb-3 md:mb-4 xl:mb-4">
             <span className="flex items-center justify-center w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] md:w-[21px] md:h-[21px] xl:w-[22px] xl:h-[22px]  text-[#F26A23] text-[9px] sm:text-[10px] md:text-[10.5px] xl:text-[11px] font-bold leading-none">
               <Image
-      src={BadgeIcon}
-      alt="Badge Icon"
-      className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] object-contain"
-    />
+                src={BadgeIcon}
+                alt="Badge Icon"
+                className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] object-contain"
+              />
             </span>
             <p className="text-[#F26A23] uppercase tracking-[1.5px] sm:tracking-[2px] md:tracking-[2.5px] xl:tracking-[3px] text-[11px] sm:text-[12px] md:text-[13px] xl:text-sm font-semibold">
               {loading ? (
                 <span className="inline-block w-16 sm:w-20 h-3 bg-orange-300/30 rounded animate-pulse" />
               ) : (
-                data?.badgeText ?? "BLOG"
+                (data?.badgeText ?? "BLOG")
               )}
             </p>
           </div>
@@ -133,8 +134,8 @@ export default function BlogSection() {
             {loading ? (
               <span className="inline-block w-72 sm:w-80 h-4 sm:h-5 bg-[#D4D4D4] rounded animate-pulse" />
             ) : (
-              data?.description ??
-              "Stay informed with the latest updates, security tips, and industry news from our experts."
+              (data?.description ??
+              "Stay informed with the latest updates, security tips, and industry news from our experts.")
             )}
           </p>
 
@@ -144,14 +145,15 @@ export default function BlogSection() {
         {/* ── BLOG CARDS GRID ───────────────────────────────────────────── */}
         <div className="px-0 sm:px-2 md:px-6 lg:px-16 xl:px-[120px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 w-full">
-
             {loading
-              ? Array.from({ length: 3 }).map((_, i) => <SkeletonCard key={i} />)
+              ? Array.from({ length: 3 }).map((_, i) => (
+                  <SkeletonCard key={i} />
+                ))
               : blogs.map((blog, index) => (
-                <Link
-                  key={index}
-                  href={`/security-detail/${blog.slug}`}
-                  className="
+                  <Link
+                    key={index}
+                    href={`/security-detail/${blog.slug}`}
+                    className="
                       group
                       flex
                       flex-col
@@ -169,38 +171,37 @@ export default function BlogSection() {
                       md:max-w-none
                       md:mx-0
                     "
-                >
-                  {/* IMAGE CONTAINER */}
-                  <div className="relative h-[180px] sm:h-[200px] md:h-[220px] lg:h-[230px] xl:h-[240px] w-full overflow-hidden">
-                    <Image
-                      src={blog.image}
-                      alt={blog.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
-                    />
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="flex flex-col flex-1 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4">
-
-                    {/* TITLE */}
-                    <h3 className="text-[17px] sm:text-[18px] md:text-[19px] lg:text-[19.5px] xl:text-[20px] font-semibold text-black leading-tight transition-colors duration-300">
-                      {blog.title}
-                    </h3>
-
-                    {/* EXCERPT */}
-                    <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[15.5px] xl:text-[16px] leading-[1.5] sm:leading-[1.53] md:leading-[1.56] lg:leading-[1.58] xl:leading-[1.6] text-[#D4D4D4] flex-1 mb-4 sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8">
-                      {blog.shortDescription}
-                    </p>
-
-                    {/* READ MORE LINK */}
-                    <div className="flex items-center gap-2 text-[#F26A23] font-semibold text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] group-hover:gap-3 transition-all duration-300">
-                      <span>{blog.buttonText || "Read More"}</span>
-                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  >
+                    {/* IMAGE CONTAINER */}
+                    <div className="relative h-[180px] sm:h-[200px] md:h-[220px] lg:h-[230px] xl:h-[240px] w-full overflow-hidden">
+                      <Image
+                        src={blog.image}
+                        alt={blog.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110 rounded-xl"
+                      />
                     </div>
-                  </div>
-                </Link>
-              ))}
+
+                    {/* CONTENT */}
+                    <div className="flex flex-col flex-1 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4">
+                      {/* TITLE */}
+                      <h3 className="text-[17px] sm:text-[18px] md:text-[19px] lg:text-[19.5px] xl:text-[20px] font-semibold text-black leading-tight transition-colors duration-300">
+                        {blog.title}
+                      </h3>
+
+                      {/* EXCERPT */}
+                      <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[15.5px] xl:text-[20px] leading-[1.5] sm:leading-[1.53] md:leading-[1.56] lg:leading-[1.58] xl:leading-[1.6] text-[#D4D4D4] flex-1 mb-4 sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8">
+                        {blog.shortDescription}
+                      </p>
+
+                      {/* READ MORE LINK */}
+                      <div className="flex items-center gap-2 text-[#F26A23] font-semibold text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] group-hover:gap-3 transition-all duration-300">
+                        <span>{blog.buttonText || "Read More"}</span>
+                        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      </div>
+                    </div>
+                  </Link>
+                ))}
           </div>
         </div>
       </div>
