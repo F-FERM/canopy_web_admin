@@ -52,7 +52,9 @@ export default function LoginPage() {
     <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-blue-50 to-blue-100">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Clio Admin</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">
+            Canopy Admin
+          </h1>
           <p className="text-gray-600">Sign in to your account</p>
         </div>
 
